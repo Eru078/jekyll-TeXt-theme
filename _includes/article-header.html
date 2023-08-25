@@ -31,7 +31,7 @@
             {%- assign _article_path = include.article.path -%}
           {%- endif -%}
           {%- assign _github_path = site.repository | append: '/tree/' | append: site.repository_tree | append: '/' | append: _article_path | replace:'//','/' -%}
-          <span class="split-space">&nbsp;</span>
+       {%-   <span class="split-space">&nbsp;</span>
           <a class="edit-on-github"
             title="{{ _locale_post_on_github }}"
             href="https://github.com/{{ _github_path }}">
@@ -42,7 +42,7 @@
   {%- else -%}
     <header style="display:none;"><h1>{{ _article_title }}</h1></header>
   {%- endif -%}
-{%- endif -%}
+{%- endif -%} -%}
 
 {%- if include.semantic != false -%}
   <meta itemprop="headline" content="{{ _article_title }}">
